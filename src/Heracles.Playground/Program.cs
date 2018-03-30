@@ -24,21 +24,14 @@ namespace Heracles.Playground
                 return;
             }
 
-            var tokenClient = new TokenClient(disco.TokenEndpoint, "client", "secret");
-            var tokenResponse = await tokenClient.RequestClientCredentialsAsync("api1");
+            var tokenResponseClient = await AskToken(disco, "client", "secret");
 
-            if(tokenResponse.IsError)
-            {
-                Console.WriteLine(tokenResponse.Error);
-                return;
-            }
-
-            Console.WriteLine(tokenResponse.Json);
+            Console.WriteLine(tokenResponseClient.Json);
             Console.ReadLine();
 
             using (var client = new HttpClient())
             {
-                client.SetBearerToken(tokenResponse.AccessToken);
+                client.SetBearerToken(tokenResponseClient.AccessToken);
 
                 var response = await client.GetAsync("http://localhost:5001/identity");
                 if (!response.IsSuccessStatusCode)
@@ -53,6 +46,31 @@ namespace Heracles.Playground
             }
 
             Console.ReadLine();
+
+            var tokenClient = new TokenClient(disco.TokenEndpoint, "ro.client", "secret");
+            var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync("alice", "password", "api1");
+
+            if (tokenResponse.IsError)
+            {
+                Console.WriteLine(tokenResponse.Error);
+                return;
+            }
+
+            Console.WriteLine(tokenResponse.Json);
+            Console.WriteLine("\n\n");
+
+            Console.ReadLine();
+        }
+
+        static async Task<TokenResponse> AskToken(DiscoveryResponse disco, string clientId, string clientSecret)
+        {
+            var tokenClient = new TokenClient(disco.TokenEndpoint, clientId, clientSecret);
+            var tokenResponse = await tokenClient.RequestClientCredentialsAsync("api1");
+
+            if (tokenResponse.IsError)
+                Console.WriteLine(tokenResponse.Error);
+
+            return tokenResponse;
         }
     }
 }
