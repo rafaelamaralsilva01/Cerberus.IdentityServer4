@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cerberus.identityserver:
+    image: cerberusidentityserver
+    build:
+      context: .
+      dockerfile: Cerberus.IdentityServer/Dockerfile
