@@ -3,18 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cerberus.IdentityServer", "Cerberus.IdentityServer\Cerberus.IdentityServer.csproj", "{C846C68D-4F12-4D3A-8162-8159530EEA7C}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{723F8BFB-F963-450C-8808-BC03A105967C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Héracles", "Héracles\Héracles.csproj", "{1E5D5A65-1335-4AE4-8C78-0687FE6613DA}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C846C68D-4F12-4D3A-8162-8159530EEA7C} = {C846C68D-4F12-4D3A-8162-8159530EEA7C}
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0916E5E5-CAB5-41F1-83C8-9DD310147BA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heracles.Playground", "Heracles.Playground\Heracles.Playground.csproj", "{D4ACC094-E027-4ADA-BBD0-4781C2B5BCE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cerberus.IdentityServer", "src\Cerberus.IdentityServer\Cerberus.IdentityServer.csproj", "{EB8C2C59-67E5-4FE8-9104-ECAD5248FCAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Héracles", "src\Héracles\Héracles.csproj", "{966449FD-3682-4D13-A592-7B7000ABF106}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heracles.Playground", "src\Heracles.Playground\Heracles.Playground.csproj", "{EFD5817E-5BE0-46B6-BBB7-C29A3DD0DDC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,30 +19,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C846C68D-4F12-4D3A-8162-8159530EEA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C846C68D-4F12-4D3A-8162-8159530EEA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C846C68D-4F12-4D3A-8162-8159530EEA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C846C68D-4F12-4D3A-8162-8159530EEA7C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{723F8BFB-F963-450C-8808-BC03A105967C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{723F8BFB-F963-450C-8808-BC03A105967C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723F8BFB-F963-450C-8808-BC03A105967C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{723F8BFB-F963-450C-8808-BC03A105967C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E5D5A65-1335-4AE4-8C78-0687FE6613DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E5D5A65-1335-4AE4-8C78-0687FE6613DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E5D5A65-1335-4AE4-8C78-0687FE6613DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E5D5A65-1335-4AE4-8C78-0687FE6613DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4ACC094-E027-4ADA-BBD0-4781C2B5BCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4ACC094-E027-4ADA-BBD0-4781C2B5BCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4ACC094-E027-4ADA-BBD0-4781C2B5BCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4ACC094-E027-4ADA-BBD0-4781C2B5BCE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8C2C59-67E5-4FE8-9104-ECAD5248FCAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8C2C59-67E5-4FE8-9104-ECAD5248FCAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8C2C59-67E5-4FE8-9104-ECAD5248FCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8C2C59-67E5-4FE8-9104-ECAD5248FCAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966449FD-3682-4D13-A592-7B7000ABF106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966449FD-3682-4D13-A592-7B7000ABF106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966449FD-3682-4D13-A592-7B7000ABF106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966449FD-3682-4D13-A592-7B7000ABF106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD5817E-5BE0-46B6-BBB7-C29A3DD0DDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD5817E-5BE0-46B6-BBB7-C29A3DD0DDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD5817E-5BE0-46B6-BBB7-C29A3DD0DDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD5817E-5BE0-46B6-BBB7-C29A3DD0DDC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C846C68D-4F12-4D3A-8162-8159530EEA7C} = {0916E5E5-CAB5-41F1-83C8-9DD310147BA1}
-		{1E5D5A65-1335-4AE4-8C78-0687FE6613DA} = {0916E5E5-CAB5-41F1-83C8-9DD310147BA1}
-		{D4ACC094-E027-4ADA-BBD0-4781C2B5BCE0} = {0916E5E5-CAB5-41F1-83C8-9DD310147BA1}
+		{EB8C2C59-67E5-4FE8-9104-ECAD5248FCAD} = {0916E5E5-CAB5-41F1-83C8-9DD310147BA1}
+		{966449FD-3682-4D13-A592-7B7000ABF106} = {0916E5E5-CAB5-41F1-83C8-9DD310147BA1}
+		{EFD5817E-5BE0-46B6-BBB7-C29A3DD0DDC6} = {0916E5E5-CAB5-41F1-83C8-9DD310147BA1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D180716-F507-4A12-BEC9-EA5CF8A58339}
