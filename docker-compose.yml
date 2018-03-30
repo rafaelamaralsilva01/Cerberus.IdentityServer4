@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: Cerberus.IdentityServer/Dockerfile
+
+  hracles:
+    image: hracles
+    build:
+      context: .
+      dockerfile: Héracles/Dockerfile
+
