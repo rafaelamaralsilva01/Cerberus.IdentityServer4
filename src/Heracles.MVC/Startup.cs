@@ -41,7 +41,17 @@ namespace Heracles.MVC
                 options.RequireHttpsMetadata = false;
 
                 options.ClientId = "mvc";
+                options.ClientSecret = "secret";
+                // Básicamente significa que é para usar Hybrid Flow.
+                options.ResponseType = "code id_token";
+
+                // The OpenID Connect middleware saves the tokens (identity, access and refresh in our case) automatically for you.
+                // That's what the SaveTokens setting does.
                 options.SaveTokens = true;
+                options.GetClaimsFromUserInfoEndpoint = true;
+
+                options.Scope.Add("api1");
+                options.Scope.Add("offline_access");
             });
         }
 
